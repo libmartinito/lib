@@ -49,7 +49,7 @@ function displayBooks(book) {
       trow.appendChild(tdata);
     });
 
-    let tdata = document.createElement("td");
+    let tdata1 = document.createElement("td");
     let rmvBtn = document.createElement("button");
     rmvBtn.textContent = "Remove";
     rmvBtn.dataset.index = curIndex;
@@ -58,11 +58,11 @@ function displayBooks(book) {
     rmvBtn.style.fontFamily = "serif";
     rmvBtn.style.paddingLeft = "6px";
     rmvBtn.style.paddingRight = "6px";
-    tdata.style.textAlign = "center";
-    tdata.appendChild(rmvBtn);
-    trow.appendChild(tdata);
+    tdata1.style.textAlign = "center";
+    tdata1.appendChild(rmvBtn);
+    trow.appendChild(tdata1);
 
-    tdata = document.createElement("td");
+    let tdata2 = document.createElement("td");
     let updateBtn = document.createElement("button");
     updateBtn.textContent = "Update";
     updateBtn.dataset.index = curIndex;
@@ -71,12 +71,14 @@ function displayBooks(book) {
     updateBtn.style.fontFamily = "serif";
     updateBtn.style.paddingLeft = "6px";
     updateBtn.style.paddingRight = "6px";
-    tdata.style.textAlign = "center";
-    tdata.appendChild(updateBtn);
+    tdata2.style.textAlign = "center";
+    tdata2.appendChild(updateBtn);
+    trow.appendChild(tdata2);
 
-    trow.appendChild(tdata);
     trow.classList.add("row");
     table.appendChild(trow);
+
+    curIndex++;
 }
 
 // A function that removes a book from the list and display
@@ -93,6 +95,7 @@ function removeBook() {
 }
 
 function updateList() {
+  curIndex = 0;
   let curList = document.getElementsByClassName("row");
   while (curList[0]) {
     curList[0].parentNode.removeChild(curList[0]);
