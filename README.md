@@ -11,4 +11,4 @@ You could also update the status of the book if you have read it or not as well 
 
 ![Remove and update functionality gif](lib-function.gif)
 
-The [project guidelines](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/library) are provided by the odin project. 
+The [project guidelines](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/library) are provided by the odin project. Another helpful resource in making the modal is the [code](https://codepen.io/bradtraversy/pen/zEOrPp) from Brad Traversy.
