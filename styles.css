@@ -18,24 +18,31 @@
 
 .modal-content {
   margin: 10% auto;
-  width: 400px;
+  width: 500px;
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   background-color: #faf9f6;
 }
 
 .modal-header {
-  width: 300px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+input {
+  font-size: 14px;
+  font-family: serif;
+  width: 300px;
 }
 
 .form-input {
-  width: 300px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
 }
@@ -45,4 +52,47 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.submit {
+  margin: 40px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.new,
+.submit {
+  font-size: 16px;
+  font-family: serif;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 36px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.table-container {
+  width: 720px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
 }

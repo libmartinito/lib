@@ -45,6 +45,7 @@ function displayBooks(book) {
     Object.keys(book).forEach(key => {
       let tdata = document.createElement("td");
       tdata.textContent = book[key];
+      tdata.style.textAlign = "center";
       trow.appendChild(tdata);
     });
 
@@ -53,12 +54,24 @@ function displayBooks(book) {
     rmvBtn.textContent = "Remove";
     rmvBtn.dataset.index = curIndex;
     rmvBtn.addEventListener("click", removeBook);
+    rmvBtn.style.fontSize = "16px";
+    rmvBtn.style.fontFamily = "serif";
+    rmvBtn.style.paddingLeft = "6px";
+    rmvBtn.style.paddingRight = "6px";
+    tdata.style.textAlign = "center";
     tdata.appendChild(rmvBtn);
+    trow.appendChild(tdata);
 
+    tdata = document.createElement("td");
     let updateBtn = document.createElement("button");
     updateBtn.textContent = "Update";
     updateBtn.dataset.index = curIndex;
     updateBtn.addEventListener("click", updateStatus);
+    updateBtn.style.fontSize = "16px";
+    updateBtn.style.fontFamily = "serif";
+    updateBtn.style.paddingLeft = "6px";
+    updateBtn.style.paddingRight = "6px";
+    tdata.style.textAlign = "center";
     tdata.appendChild(updateBtn);
 
     trow.appendChild(tdata);
