@@ -2,11 +2,13 @@ let myLibrary = [];
 
 // A constructor for the object book
 
+/*
 function Book(title, author, pages, isRead) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.isRead = isRead;
+
 }
 
 Book.prototype.info = function() {
@@ -17,6 +19,29 @@ Book.prototype.updateIsRead = function() {
   if (this.isRead == "Not yet read") {
     this.isRead = "Read";
   }
+}
+*/
+
+// Using the class syntax instead of a constructor for the object book
+
+class Book {
+  constructor(title, author, pages, isRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+  }
+
+  info() {
+    return `${title} by ${author}, ${pages} pages, ${isRead}`;
+  }
+
+  updateIsRead() {
+    if (this.isRead == "Not yet read") {
+      this.isRead = "Read";
+    }
+  }
+
 }
 
 // A function that creates an instance of a book
